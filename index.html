@@ -1,54 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link  rel="stylesheet" href="styles/styles.css" type="text/css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="styles/styles.css" type="text/css" />
 
-    <title>Mallorca Mar Excursiones</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <img src="assets/images/logo-dark.svg" class="logo-brand" alt="logo">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="assets/images/menu.svg">
-            </button>
+        <title>Mallorca Mar Excursiones</title>
+    </head>
+    <body>
+		<!-- HEADER -->
+		<!-- <div class="offertas">Descuenrto Navideño 30%</div> -->
+        <header>
+			<div class="container">
+				<nav class="navbar">
+					<img src="assets/images/logo-dark.svg" alt="logo" />
+					<ul class="items">
+						<li class="item"><a class="link" href="/">Inicio</a></li>
+						<li class="item"><a class="link" href="#contacto">Contacto</a></li>
+						<li class="item"><a class="link" href="#about">Sobre Nosotros</a></li>
+					</ul>
+					<!-- Menu hamburguesa versio mobile -->
+					<div class="menu-hamburguesa">MENU</div>
+				</nav>
+			</div>
+			<div class="hero">
+			<!-- <video autoplay muted src="videos/video.mp4"></video> -->
+				<img src="./imagenes/hero.jpg" alt="hero">
+				<div class="contenido-hero">
+					<h1>Mallorca Mar Excursiones</h1>
+					<p>Agencia de alquiler de embarcaciones</p>
+					<button class="btn btn-hero">Reserva tu Lugar!</button>
+				</div>
+			</div>
+			<!-- Redes sociales -->
+			<div class="redes-sociales">
+				<ul>
+					<li><a href="https://www.facebook.com/" class="facebook">Face</a></li>
+					<li><a href="https://www.twitter.com/" class="twitter">Twi</a></li>
+					<li><a href="https://www.instagram.com/" class="instagram">Inst</a></li>
+				</ul>
+			</div>
+			<!-- Fecha para hacer scroll hacia abajo -->
+			<div class="flecha-abajo">v</div>
+        </header>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li  class="nav-item mr-2">
-                        <a class="nav-link" href="#hero">Home</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="#team">About us</a>
-                    </li>
-                 
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <!-- INFORMACIN PRINCIPAL -->
+        <main></main>
 
-      <div class="eslogandiv">
-        <video
-        width="100%" controls autoplay muted src="videos/video.mp4"></video>
-        <div class="eslogan">
-            <h1>Mallorca Mar Excursiones</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet neque eaitia eum rerum error impedit.</p>
-          </div>
-      </div>
-      
-      
+        <!-- FOOTER SOCIAL MEDIA -->
+        <footer></footer>
+	<script>
+		function* generatorFunction(y) {
+			yield y + 5;
+			yield y + 10;
+		}
 
-      
+		function* otherGenerator(i) {
+			yield i;
+			yield* generatorFunction(i)
+			yield i += 50;
+			yield* generatorFunction(i)
+		}
 
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
+		const result = otherGenerator(45);
+
+		console.log(result.next().value); //45
+		console.log(result.next().value); //50
+		console.log(result.next().value); //55
+		console.log(result.next().value); //95
+		console.log(result.next().value); //100 || 50
+		console.log(result.next().value); //105 || 55
+	</script>
+	</body>
 </html>
