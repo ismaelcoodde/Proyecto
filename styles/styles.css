@@ -1,22 +1,23 @@
 :root {
-    --white: #e6e6e6;
+    --white: #ffffff;
     --primary: #707070;
     --secondary: #e3874f;
     --yellow: #fbff00;
     --default: #37363d;
     --coffee: #886a4a;
-    --dark: #0b1201;
+    --dark: #0c1401;
+    --gold: #FFA41B;
+
     --red:#ff2e63;
     --black:#252a34;
     --blue:#08d9d6;
-    --white:#eaeaea;
-    --title:35px;
-    --text:19px;
     --dark-color: #1a1a1a;
-     --white-color: #ffffff;
-     --light-grey-color: #f5f5f5;
-     --gold-color: #ffb944;
-     --white-color: #eaeaea;
+    --white-color: #ffffff;
+    --light-grey-color: #f5f5f5;
+    
+    --title:2em;
+    --subtitle:1.6em;
+    --text:.85em;
 }
 
 
@@ -33,6 +34,7 @@ html {
 body {
     background: var(--white);
     font-size: 18px;
+    width: 100%;
 }
 
 .container {
@@ -47,14 +49,13 @@ ul {
 }
 .btn {
     background: var(--dark);
+    font-size: var(--text);
     color: var(--white);
-    border: 1px solid var(--dark);
+    text-transform: uppercase;
+    padding: .5rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 50px;
 }
-.btn:hover {
-    background: transparent;
-    color: var(--dark);
-}
-
 
 /*
  * ─── OFERTAS ──────────────────────────────────────────────────────────────────────────
@@ -148,31 +149,30 @@ header {
 }
 .contenido-hero h1 {
     font-size: 3em;
-    color: var(--white);
+    color: var(--gold);
     /* border: 2px solid var(--white); */
     font-weight: 400;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     padding: .5em;
+    margin: 1rem 0;
 }
 .contenido-hero p {
     text-transform: uppercase;
-    padding-top: 1rem;
-    font-size: .9em;
-    color: var(--coffee);
+    color: var(--secondary);
     letter-spacing: 1px;
-    margin-bottom: 2rem;
+    font-size: var(--text);
 }
 .contenido-hero .btn-hero {
     padding: .5rem 3em;
-    font-size: .9em;
     /* border-radius: 50px; */
     background: var(--secondary);
     border-color: var(--secondary);
     color: var(--white);
+    text-transform: uppercase;
 }
 .contenido-hero .btn-hero:hover {
-    background: transparent;
+    background: var(--dark);
 }
 
 /*
@@ -217,70 +217,129 @@ header {
 
 
 
-/* info */
+/*
+ * ─── INFO ───────────────────────────────────────────────────────────────────────
+ */
+    
 .info{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    margin: 5rem 0;
+    padding: 0 3rem;
+    overflow: hidden;
 }
 .main-info{
-    border: 1px solid red;
-    width: 100%;
+    width: 65%;
+    padding: 2rem;
 }
 .titulo-info{
+    color: var(--default);
+    font-size: var(--title);
+    margin: 1rem 0;
 }
 .p-info{
-
+    margin: 2rem 0;
+    font-size: var(--text);
+    letter-spacing: 1.1px;
+    line-height: 1.8;
 }
 .btn-info{
-
+    color: var(--yellow);
 }
 .img-info{
-    border: 1px solid red;
     width: 100%;
+    padding: 2rem;
+    position: relative;
+}
+.img-info::before{
+    content: '';
+    width: 75%;
+    height: 90%;
+    top: -10%;
+    right: -150px;
+    background-color: var(--dark);
+    position: absolute;
+    z-index: -1;
 }
 
 .img-info img {
-    width: 100%;
-}
-.precios{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.precios-b{
-    background-color: black;
-    width: 300px;
-    color: white;
-    margin: 0 1rem;
-    padding: 45px;
-}
-.precios-b button{
-    border-radius: 50px;
-    padding: .5rem 1rem;
-    width: 100%;
-    background-color: var(--yellow);
-    color:var(--dark);
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
+/*
+ * ─── PRECIOS ────────────────────────────────────────────────────────────────────
+ */
+
+    
+.precios{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0;
+}
+.precio{
+    flex: 1;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem;
+    margin: 0 2em;
+}
+.precio h2,
+.precio h3,
+.precio ul li{
+    margin: 1rem 0;
+}
+.precio h2 {
+    font-size: var(--subtitle);
+}
+.precio h3 {
+    font-size: var(--title);
+}
+.precio ul li {
+    font-size: var(--text);
+    color: var(--light-grey-color);
+    letter-spacing: 1.2px;
+    margin: 1.7rem 0;
+    /* padding: 0 1rem; */
+}
+.precio button{
+    width: 100%;
+    background-color: var(--yellow);
+    color:var(--default);
+}
+.precio button:hover{
+    background-color: var(--gold);
+    color:var(--default);
+}
+
+/*
+ * ─── IMAGENES ───────────────────────────────────────────────────────────────────
+ */
+
+    
 .img-barcos{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 80px;
+    margin: 5rem 0;
 }
 picture{
-    width: 300px;
     margin: 30px;
-    height: 350px;
 }
 picture img{
     width: 100% ;
-    height: 100%;
-    border-radius: 7px;
+    min-height: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
+
+/*
+ * ─── FOTTER ──────────────────────────────────────────────────────────────────────────
+ */
 .footer .formulario-content{
     width: 60%;
     margin: 50px auto;
