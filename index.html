@@ -46,31 +46,90 @@
         </header>
 
         <!-- INFORMACIN PRINCIPAL -->
-        <main></main>
+        <main>
+            <div class="info">
+				<div clas="main-info">
+					<h2 class="titulo-info">Alquiler de barcos en mallorca</h2>
+					<p class="p-info">Lorem ipsum dolor sit amet, consectetur ore distinctio dolore ipsam eum!</p>
+					<button class="btn-info">Reserva ya</button>
+				</div>
+				<div class="img-info">
+					<img src="imagenes/lancha-2.jpg" alt="img-info">
+				</div>
+			</div>
+            <div class="precios">
+                <div class="precios-b">
+                    <h2>Excursiones</h2>
+                    <h3>350€ 4horas</h3>
+                    <ul>
+                        <li>aaaaa</li>
+                        <li>aaaaa</li>
+                        <li>aaaaa</li>
+                    </ul>
+                    <button>Reserva</button>
+                </div>
+                <div class="precios-b">
+                    <h2>Excursiones</h2>
+                    <h3>350€ 4horas</h3>
+                    <ul>
+                    <li>aaaaa</li>
+                    <li>aaaaa</li>
+                    <li>aaaaa</li>
+                </ul>
+                <button>Reserva</button>
+                </div>
+                <div class="precios-b">
+                    <h2>Excursiones</h2>
+                    <h3>350€ 4horas</h3>
+                    <ul>
+                    <li>aaaaa</li>
+                    <li>aaaaa</li>
+                    <li>aaaaa</li>
+                    </ul>
+                    <button class="btn-res">Reserva</button>
+                </div>
+            </div>
+            <div class="img-barcos">
+				<picture>
+                    <img src="imagenes/lancha.jpg" alt="" />
+                </picture>
+                <picture>
+                    <img src="imagenes/lancha-2.jpg" alt="" />
+                </picture>
+                <picture>
+                    <img src="imagenes/lancha-3.jpg" alt="" />
+				</picture>
+               
+			
+            </div>
+
+  
+
+        </main>
+        <footer class="footer">
+            <div class="formulario-content">
+         <form id="formulario">
+            <label for="user">Nombre:</label>
+            <input type="text" id="user" name="user" placeholder="Ingresa tu Nombre">
+       
+            <label for="email">Correo Electronico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu Correo Electronico">
+       
+            <label for="message">Escribe tu mensaje</label>
+            <textarea name="menssage" id="message"></textarea>
+       
+            <div class="send"><button>Enviar</button></div>
+       
+            <div class="mensaje-form">
+              <p>Escribenos un mensaje, con gusto tendras una respuesta de parte de nosotros en muy poco tiempo.</p>
+            </div>
+         </form>
+        </div>
+        </footer>
 
         <!-- FOOTER SOCIAL MEDIA -->
-        <footer></footer>
-	<script>
-		function* generatorFunction(y) {
-			yield y + 5;
-			yield y + 10;
-		}
-
-		function* otherGenerator(i) {
-			yield i;
-			yield* generatorFunction(i)
-			yield i += 50;
-			yield* generatorFunction(i)
-		}
-
-		const result = otherGenerator(45);
-
-		console.log(result.next().value); //45
-		console.log(result.next().value); //50
-		console.log(result.next().value); //55
-		console.log(result.next().value); //95
-		console.log(result.next().value); //100 || 50
-		console.log(result.next().value); //105 || 55
-	</script>
+        
+	
+			
 	</body>
 </html>
