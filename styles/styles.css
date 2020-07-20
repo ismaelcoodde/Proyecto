@@ -2,7 +2,7 @@
     --white: #ffffff;
     --primary: #707070;
     --secondary: #e3874f;
-    --yellow: #fbff00;
+    --yellow: #FFC700;
     --default: #37363d;
     --coffee: #886a4a;
     --dark: #0c1401;
@@ -231,7 +231,7 @@ header {
     overflow: hidden;
 }
 .main-info{
-    width: 65%;
+    min-width: 35%;
     padding: 2rem;
 }
 .titulo-info{
@@ -244,18 +244,19 @@ header {
     font-size: var(--text);
     letter-spacing: 1.1px;
     line-height: 1.8;
+    opacity: .6;
 }
 .btn-info{
     color: var(--yellow);
 }
 .img-info{
-    width: 100%;
+    min-width: 60%;
     padding: 2rem;
     position: relative;
 }
 .img-info::before{
     content: '';
-    width: 75%;
+    min-width: 100%;
     height: 90%;
     top: -10%;
     right: -150px;
@@ -273,19 +274,47 @@ header {
  * ─── PRECIOS ────────────────────────────────────────────────────────────────────
  */
 
-    
+ .precio-titulo {
+     color: var(--dark);
+     font-size: 2.5em;
+     font-weight: 700;
+     text-align: center;
+ }
+.precio-desc {
+    color: var(--default);
+    font-size: 1em;
+    margin: 1rem 0;
+    text-align: center;
+}
 .precios{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin: 3rem 0;
+    margin: 3rem auto;
 }
 .precio{
     flex: 1;
+    max-width: 300px; 
     background-color: var(--dark-color);
     color: white;
-    padding: 3rem;
-    margin: 0 2em;
+    padding: 2rem 3rem;
+    margin: 0 1em;
+    border-radius: 7px;
+    box-shadow: 0 0 7px rgba(0,0,0, .6);
+}
+.precio:hover {
+    background-color: var(--yellow);
+    transform: scale(1.05);
+    transition: all .3s;
+}
+.precio:hover h2, 
+.precio:hover h3, 
+.precio:hover ul li {
+    color: var(--default);
+}
+.precio:hover button {
+    color: var(--white);
+    background-color: var(--dark);
 }
 .precio h2,
 .precio h3,
@@ -293,26 +322,32 @@ header {
     margin: 1rem 0;
 }
 .precio h2 {
-    font-size: var(--subtitle);
+    font-size: 1em;
+    text-align: center;
+    opacity: .8;
 }
 .precio h3 {
     font-size: var(--title);
+    text-align: center;
+    margin: 1rem 0;
 }
 .precio ul li {
-    font-size: var(--text);
+    font-size: .8em;
     color: var(--light-grey-color);
     letter-spacing: 1.2px;
-    margin: 1.7rem 0;
+    margin: 1.5rem 0;
     /* padding: 0 1rem; */
 }
 .precio button{
     width: 100%;
-    background-color: var(--yellow);
-    color:var(--default);
+    background-color: transparent;
+    border: 2px solid  var(--yellow);
+    color: var(--yellow);
+    margin-top: 2rem;
 }
 .precio button:hover{
-    background-color: var(--gold);
-    color:var(--default);
+    background-color: white;
+    color: var(--default);
 }
 
 /*
@@ -340,95 +375,86 @@ picture img{
 /*
  * ─── FOTTER ──────────────────────────────────────────────────────────────────────────
  */
-.footer .formulario-content{
-    width: 60%;
-    margin: 50px auto;
-    background: #fff;
-    padding:30px;
-    border-radius: 50px;
-    border: 1.5px solid var(--red);
+.footer{
+    width: 100%;
+    margin-top: 50px;
+    background: #000;
+    border-top: 5px solid var(--gold);
+}
+.formulario-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+.formulario-contacto {
+    min-width: 50%;
+    text-align: center;
+}
+.formulario-contacto h3 {
+    color: var(--white);
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.formulario-contacto p {
+    color: var(--yellow);
+    font-size: .8em;
+    margin: 1.5rem 0;
 }
 .footer .formulario-content #formulario{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    min-width: 50%;
+    padding: 2rem;
 }
 .footer .formulario-content #formulario label{
-    font-size: 20px;
-    text-align: center;
-    color: var(--black);
-    margin: 30px 0px 10px 0px;
+    color: var(--default);
+    font-size: .75em;
 }
-.footer .formulario-content #formulario input{
-    width: 90%;
-    height: 40px;
-    margin:auto;
-    border-radius: 24px;
-    outline: none;
-    border:1.5px solid var(--yellow);
-    text-align: center;
-    font-size: 18px;
-    color: var(--black);
-}
+.footer .formulario-content #formulario input,
 .footer .formulario-content #formulario textarea{
-    width: 90%;
-    height: 200px;
-    margin:auto;
-    padding: 20px;
-    border-radius: 24px;
-    outline: none;
-    border:1.5px solid var(--yellow);
-    font-size: 15px;
-    color: var(--black);
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: .8em;
+    padding: .7rem 1rem;
+    margin: .5rem 0 1rem 0;
 }
 .footer .formulario-content #formulario .send{
-    margin: 30px;
-    display: flex;
-    justify-content: center;
+    margin: 1rem auto;
+    max-width: 350px;
 }
 .footer .formulario-content #formulario button{
-    width: 120px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    background: var(--yellow);
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: .85em;
+    font-weight: bold;
+    background: var(--white);
     border: none;
-    outline: none;
-    border-radius: 20px;
-    color: #fff;
+    border-radius: 50px;
+    color: var(--dark);
     cursor: pointer;
-    transition: 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
 }
 .footer .formulario-content #formulario button:hover{
-    background: var(--blue);
+    background: var(--yellow);
 }
-.footer .formulario-content #formulario .mensaje-form{
-    width: 100%;
-    margin:auto;
-    padding:20px;
+.footer .formulario-content #formulario p{
+    font-size: .9em;
+    color: var(--gold);
+    opacity: .5;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
 }
-.footer .formulario-content #formulario .mensaje-form p{
-    font-size:19px;
-    color: var(--black);
-    line-height: 35px;
+.copy {
+    padding: 1rem 0;
+    border-top: 1px solid #111;
 }
-.footer .footer-text{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background:rgba(0,0,0,0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #fff;
-}
-.footer .footer-text p{
-    font-size: 20px;
+.copy p {
+    color: var(--light-grey-color);
     text-align: center;
-    color: #fff;
+    font-size: .8em;
 }
 
 
@@ -440,7 +466,7 @@ picture img{
  * ─── MEDIA QUERIES ──────────────────────────────────────────────────────────────────────────
  */
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     body {
         font-size: 16px;
     }
@@ -453,10 +479,29 @@ picture img{
     .navbar .menu-hamburguesa {
         display: block;
     }
+    .precios,
+    .info,
+    .img-barcos,
+    .formulario-content {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .img-barcos picture {
+        margin: 2rem 0;
+    }
+    .precios .precio {
+        margin: 2rem auto;
+    }
 }
 
 @media (max-width: 320px) {
     body {
         font-size: 14px;
+    }
+    .precios,
+    .info,
+    .formulario-content {
+        display: block;
     }
 }
