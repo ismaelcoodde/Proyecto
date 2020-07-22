@@ -190,7 +190,7 @@ header {
 }
 .redes-sociales a {
     display: inline-block;
-    color: var(--white);
+    color: var(--gold);
 }
 .redes-sociales a:hover {
     transform: scale(1.1);
@@ -455,6 +455,21 @@ picture img{
     color: var(--light-grey-color);
     text-align: center;
     font-size: .8em;
+}
+.garota{
+    background-color: black;
+    padding: 30px;
+    border-radius: 10px;
+}
+.garota h2{
+    color: var(--gold);
+    text-align: center;
+    padding-bottom: 10px;
+}
+.garota li{
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 
